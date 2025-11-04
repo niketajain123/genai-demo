@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT Style Chat</title>
+    <link rel="stylesheet" href="../static/style.css"> 
+</head>
+<body>
+    <div class="chat-container">
+        <div class="settings-bar">
+            <button class="settings-btn" onclick="toggleControls()">⚙️ Settings</button>
+        </div>
+        <div id="controls" class="controls">
+            <div class="control-group">
+                <label>Temperature <span id="temp-value">0.7</span></label>
+                <input type="range" id="temperature" min="0" max="1" step="0.1" value="0.7">
+            </div>
+            <div class="control-group">
+                <label>Top P <span id="top-p-value">0.9</span></label>
+                <input type="range" id="top-p" min="0" max="1" step="0.1" value="0.9">
+            </div>
+            <div class="control-group">
+                <label>Top K <span id="top-k-value">50</span></label>
+                <input type="range" id="top-k" min="1" max="100" step="1" value="50">
+            </div>
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="prompt" placeholder="Send a message..." />
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+    
+</body>
+</html>
